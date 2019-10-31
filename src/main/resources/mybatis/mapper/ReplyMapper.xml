@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunqiao.myblog.mapper.ReplyMapper">
+    <!--通过ID查询博文类型信息-->
+    <select id="getReplyById" resultType="com.sunqiao.myblog.bean.Reply">
+      select * from sq_reply where id = #{id}
+    </select>
+
+
+
+</mapper>

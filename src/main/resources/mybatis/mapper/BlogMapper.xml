@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sunqiao.myblog.mapper.BlogMapper">
+    <!--通过ID查询博文信息-->
+    <select id="getBlogMapper" resultType="map">
+    select
+    id as id,
+    title as title,
+    author as author,
+    summary as summary,
+    imgName as imageName,
+    subdate as subDate,
+    typename as typeName
+    from sq_blog
+</select>
+    <insert id="insertBlog" parameterType="com.sunqiao.myblog.bean.Blog">
+    insert into sq_blog(id,title,author,summary,imgName,subdate,typename,content)
+      values (#{id},#{title},#{author},#{summary},#{imgName},#{subDate},#{typeName},#{content})
+
+
+    </insert>
+    <update id="updateBlog" parameterType="com.sunqiao.myblog.bean.Blog" >
+        update sq_blog set title=#{title},summary=#{summary},typename=#{typeName},imgName=#{imgName},content=#{content}
+        where id=#{id}
+
+    </update>
+
+    <delete id="deleteBlog" >
+        delete from sq_blog where id=#{id}
+
+    </delete>
+
+
+</mapper>
