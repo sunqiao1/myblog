@@ -11,7 +11,6 @@ import java.util.Map;
  * @Since 2019
  */
 public interface BlogMapper {
-    //List<Map> getBlogByIdMapper(Integer id);
 
      List<Map> getBlogMapper();
 

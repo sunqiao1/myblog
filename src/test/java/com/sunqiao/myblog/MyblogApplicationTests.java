@@ -44,11 +44,6 @@ class MyblogApplicationTests {
         //.out.println(blog);
     }
 
-    @Test
-    public void testMapper(){
-        BlogType blogTypeByIdMapper = blogTypeMapper.getBlogTypeByIdMapper(1);
-        System.out.println(blogTypeByIdMapper);
-    }
 
     @Test
     public void testLog(){

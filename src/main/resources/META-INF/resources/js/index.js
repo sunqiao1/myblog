@@ -1,6 +1,7 @@
 $(function(){
     showBlog();
     showLog();
+    showType();
 });
 
 function showBlog(){
@@ -74,7 +75,7 @@ function showLog(){
 }
     function showAllLog(logList){
         for(var i = 0; i<logList.length; i++){
-            console.log(logList[i].releasedate);
+
             $("#log").prepend(
                 myTime(logList[i].releasedate)
                 +" <li style='list-style: none'>"
@@ -89,6 +90,33 @@ function showLog(){
 }
 
 
+
+
+function showType(){
+    var url = "/blogType/type";
+    var data = {};
+
+    $.getJSON(url,data,function(result){
+        if(result.state == 0){
+            var typeList = result.data;
+            showAllType(typeList)
+        }else{
+            alert(result.message)
+        }
+    });
+}
+function showAllType(typeList){
+    for(var i = 0;i<typeList.length;i++){
+
+        $("#blogtype").append(
+            "<a>"
+            +typeList[i].typeName
+            +"</a>"
+
+        )
+
+    }
+}
 
 
 

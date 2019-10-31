@@ -3,9 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sunqiao.myblog.mapper.BlogTypeMapper">
-    <!--通过ID查询博文类型信息-->
-    <select id="getBlogTypeByIdMapper" resultType="com.sunqiao.myblog.bean.BlogType">
-      select * from sq_blogtype where id = #{id}
+
+    <select id="getBlogTypeById" resultType="map">
+      select
+      id as id,
+      typeName as typeName
+      from sq_blogtype
     </select>
 
 

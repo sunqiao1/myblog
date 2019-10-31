@@ -25,8 +25,8 @@ public class BlogServiceImpl implements BlogService {
 
     @Override
     public List<Map> getBlogMapper() {
-        List<Map> mapper = this.blogMapper.getBlogMapper();
-        return mapper;
+        List<Map> list = this.blogMapper.getBlogMapper();
+        return list;
     }
 
     @Transactional

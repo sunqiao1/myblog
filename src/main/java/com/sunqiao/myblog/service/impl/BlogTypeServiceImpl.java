@@ -6,6 +6,8 @@ import com.sunqiao.myblog.service.BlogTypeService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author SUNQIAO
@@ -20,9 +22,8 @@ public class BlogTypeServiceImpl implements BlogTypeService {
 
 
     @Override
-    public BlogType getBlogTypeByIdService(Integer id) {
-        BlogType blogType = blogTypeMapper.getBlogTypeByIdMapper(id);
-
-        return blogType;
+    public List<Map> getBlogTypeById() {
+        List<Map> list = blogTypeMapper.getBlogTypeById();
+        return list;
     }
 }
