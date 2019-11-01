@@ -4,9 +4,24 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sunqiao.myblog.mapper.CommentMapper">
     <!--通过ID查询博文类型信息-->
-    <select id="getCommentById" resultType="com.sunqiao.myblog.bean.Comment">
-      select * from sq_comment where id = #{id}
+    <select id="getComment" resultType="map">
+      select
+      id as id,
+      userIp as userIp,
+      blogId as blogId,
+      content as content,
+      commentDate as commentDate,
+      state as state,
+      nickName as nickName,
+      mailAddress as mailAddress,
+      personal as personal
+      from sq_comment
     </select>
+
+    <delete id="deleteComment" >
+        delete from sq_comment where id = #{id}
+
+    </delete>
 
 
 

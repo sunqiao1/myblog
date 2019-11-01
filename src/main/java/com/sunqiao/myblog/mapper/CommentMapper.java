@@ -2,6 +2,9 @@ package com.sunqiao.myblog.mapper;
 
 import com.sunqiao.myblog.bean.Comment;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author SUNQIAO
  * @Date 2019-10-25 13:55
@@ -10,5 +13,8 @@ import com.sunqiao.myblog.bean.Comment;
 public interface CommentMapper {
 
 
-    public Comment getCommentById(Integer id);
+    List<Map> getComment();
+
+    int deleteComment(Integer id);
+
 }

@@ -5,6 +5,8 @@ import com.sunqiao.myblog.mapper.CommentMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author SUNQIAO
@@ -14,5 +16,7 @@ import javax.annotation.Resource;
 
 
 public interface CommentService {
-    public Comment getCommentById(Integer id);
+    List<Map> getComment();
+
+    int deleteComment(Integer id);
 }
