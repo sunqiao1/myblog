@@ -20,6 +20,35 @@ public class Link {
     public Link() {
     }
 
+    public Link(String linkName, String linkUrl, String imgName, String describes, String contact, String contactWay) {
+        this.linkName = linkName;
+        this.linkUrl = linkUrl;
+        this.imgName = imgName;
+        this.describes = describes;
+        this.contact = contact;
+        this.contactWay = contactWay;
+    }
+
+    public Link(String linkName, String linkUrl, String imgName, String describes, String addTime, String contact, String contactWay) {
+        this.linkName = linkName;
+        this.linkUrl = linkUrl;
+        this.imgName = imgName;
+        this.describes = describes;
+        this.addTime = addTime;
+        this.contact = contact;
+        this.contactWay = contactWay;
+    }
+
+    public Link(Integer id, String linkName, String linkUrl, String imgName, String describes, String contact, String contactWay) {
+        this.id = id;
+        this.linkName = linkName;
+        this.linkUrl = linkUrl;
+        this.imgName = imgName;
+        this.describes = describes;
+        this.contact = contact;
+        this.contactWay = contactWay;
+    }
+
     public Link(Integer id, String linkName, String linkUrl, String imgName, String describes, String addTime, String contact, String contactWay) {
         this.id = id;
         this.linkName = linkName;

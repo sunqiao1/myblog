@@ -3,10 +3,35 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sunqiao.myblog.mapper.LinkMapper">
-    <!--通过ID查询博文类型信息-->
-    <select id="getLinkById" resultType="com.sunqiao.myblog.bean.Link">
-      select * from sq_link where id = #{id}
+
+    <select id="getLink" resultType="map">
+      select
+      id as id,
+      linkName as linkName,
+      linkUrl as linkUrl,
+      imgName as imgName,
+      describes as describes,
+      addTime as addTime,
+      contact as contact,
+      contactWay as contactWay
+      from sq_link
     </select>
+
+    <insert id="insertLink" parameterType="com.sunqiao.myblog.bean.Link">
+        insert into sq_link (linkName, linkUrl, imgName, describes, addTime, contact, contactWay)
+        values (#{linkName},#{linkUrl},#{imgName},#{describes},#{addTime},#{contact},#{contactWay})
+
+    </insert>
+
+    <update id="updateLink" parameterType="com.sunqiao.myblog.bean.Link">
+        update sq_link set linkName=#{linkName},linkUrl=#{linkUrl},imgName=#{imgName},describes=#{describes},contact=#{contact},contactWay=#{contactWay}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteLink">
+        delete from sq_link where id = #{id}
+
+    </delete>
 
 
 
