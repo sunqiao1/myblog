@@ -11,7 +11,7 @@ public class Reply {
     private Integer id;
     private String comId;
     private String userIp;
-    private String blogIp;
+    private String blogId;
     private String replyContent;
     private String replyDate;
     private String replyState;
@@ -20,14 +20,11 @@ public class Reply {
     private String personal;
     private String level;
 
-    public Reply() {
-    }
-
-    public Reply(Integer id, String comId, String userIp, String blogIp, String replyContent, String replyDate, String replyState, String cName, String eAdd, String personal, String level) {
+    public Reply(Integer id, String comId, String userIp, String blogId, String replyContent, String replyDate, String replyState, String cName, String eAdd, String personal, String level) {
         this.id = id;
         this.comId = comId;
         this.userIp = userIp;
-        this.blogIp = blogIp;
+        this.blogId = blogId;
         this.replyContent = replyContent;
         this.replyDate = replyDate;
         this.replyState = replyState;
@@ -35,6 +32,41 @@ public class Reply {
         this.eAdd = eAdd;
         this.personal = personal;
         this.level = level;
+    }
+
+    public Reply() {
+    }
+
+    public Reply(String comId, String userIp, String blogId, String replyContent, String replyDate, String replyState, String cName, String eAdd, String personal, String level) {
+        this.comId = comId;
+        this.userIp = userIp;
+        this.blogId = blogId;
+        this.replyContent = replyContent;
+        this.replyDate = replyDate;
+        this.replyState = replyState;
+        this.cName = cName;
+        this.eAdd = eAdd;
+        this.personal = personal;
+        this.level = level;
+    }
+
+    public Reply(String comId, String userIp, String blogId, String replyContent, String replyState, String cName, String eAdd, String personal, String level) {
+        this.comId = comId;
+        this.userIp = userIp;
+        this.blogId = blogId;
+        this.replyContent = replyContent;
+        this.replyState = replyState;
+        this.cName = cName;
+        this.eAdd = eAdd;
+        this.personal = personal;
+        this.level = level;
+    }
+
+    public Reply(Integer id, String replyContent, String cName, String eAdd) {
+        this.id = id;
+        this.replyContent = replyContent;
+        this.cName = cName;
+        this.eAdd = eAdd;
     }
 
     public Integer getId() {
@@ -61,12 +93,12 @@ public class Reply {
         this.userIp = userIp;
     }
 
-    public String getBlogIp() {
-        return blogIp;
+    public String getBlogId() {
+        return blogId;
     }
 
-    public void setBlogIp(String blogIp) {
-        this.blogIp = blogIp;
+    public void setBlogId(String blogId) {
+        this.blogId = blogId;
     }
 
     public String getReplyContent() {
@@ -133,7 +165,7 @@ public class Reply {
         return getId().equals(reply.getId()) &&
                 getComId().equals(reply.getComId()) &&
                 getUserIp().equals(reply.getUserIp()) &&
-                getBlogIp().equals(reply.getBlogIp()) &&
+                getBlogId().equals(reply.getBlogId()) &&
                 getReplyContent().equals(reply.getReplyContent()) &&
                 getReplyDate().equals(reply.getReplyDate()) &&
                 getReplyState().equals(reply.getReplyState()) &&
@@ -145,7 +177,7 @@ public class Reply {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getComId(), getUserIp(), getBlogIp(), getReplyContent(), getReplyDate(), getReplyState(), getcName(), geteAdd(), getPersonal(), getLevel());
+        return Objects.hash(getId(), getComId(), getUserIp(), getBlogId(), getReplyContent(), getReplyDate(), getReplyState(), getcName(), geteAdd(), getPersonal(), getLevel());
     }
 
     @Override
@@ -154,7 +186,7 @@ public class Reply {
                 "id=" + id +
                 ", comId='" + comId + '\'' +
                 ", userIp='" + userIp + '\'' +
-                ", blogIp='" + blogIp + '\'' +
+                ", blogId='" + blogId + '\'' +
                 ", replyContent='" + replyContent + '\'' +
                 ", replyDate='" + replyDate + '\'' +
                 ", replyState='" + replyState + '\'' +

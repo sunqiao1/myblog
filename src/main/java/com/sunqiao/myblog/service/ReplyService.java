@@ -10,4 +10,11 @@ import com.sunqiao.myblog.bean.Reply;
 public interface  ReplyService {
     public Reply getReplyById(Integer id);
 
+    int insertReply(String comId, String userIp, String blogId, String replyContent, String replyState, String cName, String eAdd, String personal, String level);
+
+    int updateReply(Integer id,String replyContent, String cName, String eAdd);
+
+    int deleteReply(Integer id);
+
+
 }

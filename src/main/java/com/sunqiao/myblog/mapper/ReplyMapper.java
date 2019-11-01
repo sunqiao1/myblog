@@ -11,4 +11,11 @@ public interface ReplyMapper {
 
     public Reply getReplyById(Integer id);
 
+    int insertReply(Reply reply);
+
+    int updateReply(Reply reply);
+
+    int deleteReply(Integer id);
+
+
 }
