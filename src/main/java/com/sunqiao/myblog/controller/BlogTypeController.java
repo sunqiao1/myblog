@@ -32,5 +32,29 @@ public class BlogTypeController {
         return new JsonResult(list);
     }
 
+    @GetMapping("/inserttype")
+    @ResponseBody
+    public JsonResult insertBlogType(String typeName){
+        int i = blogTypeService.insertBlogType(typeName);
+        return  new JsonResult(i);
+
+    }
+
+    @GetMapping("/updatetype")
+    @ResponseBody
+    public JsonResult updateBlogType(Integer id,String typeName){
+        int i = blogTypeService.updateBlogType(id,typeName);
+        return  new JsonResult(i);
+
+    }
+
+    @GetMapping("/deletetype")
+    @ResponseBody
+    public JsonResult deleteBlogType(Integer id){
+        int i = blogTypeService.deleteBlogType(id);
+        return  new JsonResult(i);
+
+    }
+
 
 }

@@ -11,6 +11,14 @@ public class BlogType {
     private Integer id;
     private String typeName;
 
+    public BlogType(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public BlogType(Integer id) {
+        this.id = id;
+    }
+
     public BlogType() {
     }
 

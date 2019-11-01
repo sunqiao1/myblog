@@ -12,4 +12,10 @@ import java.util.Map;
  */
 public interface BlogTypeService {
    List<Map> getBlogTypeById();
+
+   int insertBlogType(String typeName);
+
+   int updateBlogType(Integer id,String typeName);
+
+   int deleteBlogType(Integer id);
 }

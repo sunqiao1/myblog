@@ -14,7 +14,9 @@
     subdate as subDate,
     typename as typeName
     from sq_blog
-</select>
+    </select>
+
+
     <insert id="insertBlog" parameterType="com.sunqiao.myblog.bean.Blog">
     insert into sq_blog(id,title,author,summary,imgName,subdate,typename,content)
       values (#{id},#{title},#{author},#{summary},#{imgName},#{subDate},#{typeName},#{content})

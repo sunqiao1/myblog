@@ -13,6 +13,12 @@ import java.util.Map;
 public interface BlogTypeMapper {
     List<Map> getBlogTypeById();
 
+    int insertBlogType(BlogType blogType);
+
+    int updateBlogType(BlogType blogType);
+
+    int deleteBlogType(Integer id);
+
 
 
 

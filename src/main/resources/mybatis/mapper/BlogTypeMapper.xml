@@ -12,5 +12,20 @@
     </select>
 
 
+    <insert id="insertBlogType" parameterType="com.sunqiao.myblog.bean.BlogType">
+        insert into sq_blogtype(id,typeName)
+      values (#{id},#{typeName})
+    </insert>
+
+    <update id="updateBlogType" parameterType="com.sunqiao.myblog.bean.BlogType">
+         update sq_blogtype set typeName=#{typeName}
+         where id = #{id}
+
+    </update>
+
+    <delete id="deleteBlogType" >
+        delete from sq_blogtype where id = #{id}
+
+    </delete>
 
 </mapper>
