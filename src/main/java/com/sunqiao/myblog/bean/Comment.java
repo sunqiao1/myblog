@@ -18,7 +18,7 @@ public class Comment {
     private String mailAddress;
     private String personal;
 
-    public Comment() {
+    public Comment(String userIp, String blogId, String content, String state, String nickName, String mailAddress, String personal, String commentDate) {
     }
 
     public Comment(Integer id, String userIp, String blogId, String content, String commentDate, String state, String nickName, String mailAddress, String personal) {

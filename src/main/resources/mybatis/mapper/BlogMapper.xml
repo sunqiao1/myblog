@@ -23,6 +23,7 @@
 
 
     </insert>
+
     <update id="updateBlog" parameterType="com.sunqiao.myblog.bean.Blog" >
         update sq_blog set title=#{title},summary=#{summary},typename=#{typeName},imgName=#{imgName},content=#{content}
         where id=#{id}

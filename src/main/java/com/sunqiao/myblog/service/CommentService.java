@@ -18,5 +18,7 @@ import java.util.Map;
 public interface CommentService {
     List<Map> getComment();
 
+    int insertComment(String userIp,String blogId,String content,String state,String nickName,String mailAddress,String personal);
+
     int deleteComment(Integer id);
 }

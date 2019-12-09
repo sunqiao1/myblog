@@ -15,6 +15,9 @@ public interface CommentMapper {
 
     List<Map> getComment();
 
+    int insertComment(Comment id);
+
     int deleteComment(Integer id);
+
 
 }

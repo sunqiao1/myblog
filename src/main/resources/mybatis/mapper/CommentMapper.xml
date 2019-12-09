@@ -18,6 +18,12 @@
       from sq_comment
     </select>
 
+    <insert id="insertComment" parameterType="com.sunqiao.myblog.bean.Comment">
+    insert into sq_comment(id,userIp,blogId,content,commentDate,state,nickName,mailAddress,personal)
+      values (#{id},#{userIp},#{blogId},#{content},#{commentDate},#{state},#{nickName},#{mailAddress},#{personal})
+
+    </insert>
+
     <delete id="deleteComment" >
         delete from sq_comment where id = #{id}
 

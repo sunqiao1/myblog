@@ -1,5 +1,7 @@
 package com.sunqiao.myblog.util;
 
+import io.swagger.annotations.Api;
+
 import java.io.Serializable;
 
 /**
@@ -9,6 +11,7 @@ import java.io.Serializable;
  *
  *
  */
+
 public class JsonResult implements Serializable {
     public static final int SUCCESS = 0;
     public static final int ERROR = 1;
